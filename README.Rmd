@@ -64,5 +64,7 @@ ures <- urlscan_result(xdf$id[2], TRUE, TRUE)
 
 str(ures$scan_result, 2)
 
-ures$screenshot
+magick::image_write(ures$screenshot, "img/shot.png")
 ```
+
+![](img/shot.png)

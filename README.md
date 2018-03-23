@@ -180,7 +180,7 @@ str(ures$scan_result, 2)
     ##  - attr(*, "class")= chr [1:2] "urlscan_result" "list"
 
 ``` r
-ures$screenshot
+magick::image_write(ures$screenshot, "img/shot.png")
 ```
 
-![](/var/folders/1w/2d82v7ts3gs98tc6v772h8s40000gp/T//RtmpdPM7M1/file16085246d6ab0.png)<!-- -->
+![](img/shot.png)
