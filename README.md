@@ -18,6 +18,7 @@ to search public \<urlscans.io\> scan submissions.
 The following functions are implemented:
 
   - `urlscan_search`: Perform a urlscan.io query
+  - `urlscan_result`:	Retrieve detailed results for a given scan ID
 
 ## Installation
 
