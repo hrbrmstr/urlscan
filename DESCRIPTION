@@ -1,0 +1,28 @@
+Package: urlscan
+Type: Package
+Title: Analyze Websites and Resources They Request
+Version: 0.1.0
+Date: 2018-03-23
+Authors@R: c(
+    person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
+           comment = c(ORCID = "0000-0001-5670-2640"))
+  )
+Maintainer: Bob Rudis <bob@rud.is>
+Description: The <urlscan.io> service provides an 'API' enabling analysis of 
+    websites and the resources they request. Much like the 'Inspector' of your 
+    browser, <urlscan.io> will let you take a look at the individual resources 
+    that are requested when a site is loaded. Tools are provided to search
+    public <urlscans.io> scan submissions.
+URL: https://github.com/hrbrmstr/urlscan
+BugReports: https://github.com/hrbrmstr/urlscan/issues
+Encoding: UTF-8
+License: AGPL
+Suggests:
+    testthat,
+    covr
+Depends:
+    R (>= 3.2.0)
+Imports:
+    httr,
+    jsonlite
+RoxygenNote: 6.0.1.9000
