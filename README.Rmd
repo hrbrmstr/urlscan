@@ -49,11 +49,20 @@ x <- urlscan_search("domain:r-project.org")
 bind_cols(
   select(x$results$task, -options) %>% 
     mutate(user_agent = x$results$task$options$useragent)
-  , x$results$stats, x$results$page
+  ,x$results$stats, 
+  x$results$page
 ) %>% 
+  mutate(id = x$results$`_id`) %>% 
+  mutate(result_api_url = x$results$result) %>% 
   tbl_df() -> xdf
 
 xdf
 
 glimpse(xdf)
+
+ures <- urlscan_result(xdf$id[2], TRUE, TRUE)
+
+str(ures$scan_result, 2)
+
+ures$screenshot
 ```
