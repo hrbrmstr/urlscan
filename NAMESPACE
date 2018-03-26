@@ -2,7 +2,9 @@
 
 export(urlscan_result)
 export(urlscan_search)
+export(urlscan_submit)
 importFrom(httr,GET)
+importFrom(httr,POST)
 importFrom(httr,content)
 importFrom(httr,status_code)
 importFrom(httr,stop_for_status)

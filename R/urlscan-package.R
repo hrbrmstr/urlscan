@@ -4,13 +4,13 @@
 #' websites and the resources they request. Much like the 'Inspector' of your
 #' browser, <urlscan.io> will let you take a look at the individual resources
 #' that are requested when a site is loaded. Tools are provided to search
-#' public <urlscans.io> scan submissions.
+#' public <urlscans.io> scan submissions/results and submit URLs for scanning.
 #'
 #' @md
 #' @name urlscan
 #' @docType package
 #' @author Bob Rudis (bob@@rud.is)
-#' @importFrom httr GET user_agent content stop_for_status warn_for_status status_code
+#' @importFrom httr GET user_agent content stop_for_status warn_for_status status_code POST
 #' @importFrom jsonlite fromJSON
 #' @importFrom magick image_read
 NULL
