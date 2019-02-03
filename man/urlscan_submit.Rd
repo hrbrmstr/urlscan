@@ -34,6 +34,11 @@ The API key should be in the environment variable \code{URLSCAN_API_KEY} and the
 easiest way to do that is via the \code{~/.Renviron} file. You can also manually pass
 it in as a parameter.
 }
+\examples{
+\dontrun{
+urlscan_submit("https://r-project.org/")
+}
+}
 \references{
 \url{https://urlscan.io/about-api/#submission}
 }

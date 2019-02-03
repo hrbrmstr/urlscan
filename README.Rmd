@@ -3,6 +3,9 @@ output: rmarkdown::github_document
 editor_options: 
   chunk_output_type: console
 ---
+[![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/urlscan.svg?branch=master)](https://travis-ci.org/hrbrmstr/urlscan)
+[![Coverage Status](https://codecov.io/gh/hrbrmstr/urlscan/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/urlscan)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/urlscan)](https://cran.r-project.org/package=urlscan)
 
 # urlscan
 
@@ -68,3 +71,13 @@ magick::image_write(ures$screenshot, "img/shot.png")
 ```
 
 ![](img/shot.png)
+
+## urlscan Metrics
+
+```{r cloc, echo=FALSE}
+cloc::cloc_pkg_md()
+```
+
+## Code of Conduct
+
+Please note that the 'urlscan' project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.

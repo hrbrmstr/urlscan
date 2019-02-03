@@ -27,3 +27,7 @@ a screenshot was available.
 \description{
 Retrieve detailed results for a given scan ID
 }
+\examples{
+x <- urlscan_search("domain:r-project.org")
+r <- urlscan_result(x$results[["_id"]][1])
+}

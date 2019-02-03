@@ -38,6 +38,9 @@ Furthermore, you can concatenate search-terms with \code{AND}, \code{OR}, etc.
 \note{
 Search can only find \strong{public} scans, there is no way to search for private scans.
 }
+\examples{
+x <- urlscan_search("r-project.org")
+}
 \references{
 \url{https://urlscan.io/about-api/#search}
 }

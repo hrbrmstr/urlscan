@@ -14,6 +14,9 @@
 #'         The list can also include `screenshot` if `include_shot` is `TRUE` and
 #'         a screenshot was available.
 #' @export
+#' @examples
+#' x <- urlscan_search("domain:r-project.org")
+#' r <- urlscan_result(x$results[["_id"]][1])
 urlscan_result <- function(scan_id, include_dom=FALSE, include_shot=FALSE) {
 
   httr::GET(

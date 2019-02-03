@@ -1,4 +1,10 @@
 
+[![Travis-CI Build
+Status](https://travis-ci.org/hrbrmstr/urlscan.svg?branch=master)](https://travis-ci.org/hrbrmstr/urlscan)
+[![Coverage
+Status](https://codecov.io/gh/hrbrmstr/urlscan/branch/master/graph/badge.svg)](https://codecov.io/gh/hrbrmstr/urlscan)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/urlscan)](https://cran.r-project.org/package=urlscan)
+
 # urlscan
 
 Analyze Websites and Resources They Request
@@ -72,3 +78,16 @@ magick::image_write(ures$screenshot, "img/shot.png")
 ```
 
 ![](img/shot.png)
+
+## urlscan Metrics
+
+| Lang | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
+| :--- | -------: | ---: | --: | ---: | ----------: | ---: | -------: | ---: |
+| R    |       10 | 0.91 | 157 | 0.89 |          51 | 0.69 |      130 | 0.76 |
+| Rmd  |        1 | 0.09 |  20 | 0.11 |          23 | 0.31 |       40 | 0.24 |
+
+## Code of Conduct
+
+Please note that the ‘urlscan’ project is released with a [Contributor
+Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
+you agree to abide by its terms.

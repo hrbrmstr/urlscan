@@ -21,6 +21,9 @@
 #'         he scan, you can use it to retrieve the result after waiting for a short while.
 #' @references <https://urlscan.io/about-api/#submission>
 #' @export
+#' @examples \dontrun{
+#' urlscan_submit("https://r-project.org/")
+#' }
 urlscan_submit <- function(url, public=TRUE, custom_agent=NULL, referer=NULL,
                            api_key = urlscan_api_key()) {
 

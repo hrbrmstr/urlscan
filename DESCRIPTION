@@ -13,13 +13,14 @@ Description: The <urlscan.io> service provides an 'API' enabling analysis of
     browser, <urlscan.io> will let you take a look at the individual resources 
     that are requested when a site is loaded. Tools are provided to search
     public <urlscans.io> scan submissions/results and submit URLs for scanning.
-URL: https://github.com/hrbrmstr/urlscan
-BugReports: https://github.com/hrbrmstr/urlscan/issues
+URL: https://gitlab.com/hrbrmstr/urlscan
+BugReports: https://gitlab.com/hrbrmstr/urlscan/issues
 Encoding: UTF-8
-License: AGPL
+License: MIT + file LICENSE
 Suggests:
     testthat,
-    covr
+    covr,
+    pingr
 Depends:
     R (>= 3.2.0)
 Imports:

@@ -24,6 +24,8 @@
 #' @references <https://urlscan.io/about-api/#search>
 #' @note Search can only find **public** scans, there is no way to search for private scans.
 #' @export
+#' @examples
+#' x <- urlscan_search("r-project.org")
 urlscan_search <- function(query, size=100, offset=0, sort=NULL) {
 
    httr::GET(
