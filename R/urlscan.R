@@ -2,7 +2,6 @@
 #'
 #' urlscan.io uses an Elasticsearch back-end and enables querying by a number
 #' of fields, including:
-#'
 #' - `domain`: Domain (or a subdomain of it) is contacted in one of the requests
 #' - `page.domain`: Domain (or a subdomain of it) is the first domain to be contacted
 #' - `ip`: The IP or subnet are contacted in one request
@@ -35,7 +34,7 @@ urlscan_search <- function(query, size=100, offset=0, sort=NULL) {
        offset = offset,
        sort = sort
      ),
-     httr::user_agent("urlscan #rstats package : https://github.com/hrbrmstr/urlscan")
+     .URLSCANUA
    ) -> res
 
    httr::stop_for_status(res)

@@ -18,7 +18,7 @@ urlscan_result <- function(scan_id, include_dom=FALSE, include_shot=FALSE) {
 
   httr::GET(
     url = sprintf("https://urlscan.io/api/v1/result/%s", scan_id),
-    httr::user_agent("urlscan #rstats package : https://github.com/hrbrmstr/urlscan")
+    .URLSCANUA
   ) -> res
 
   httr::stop_for_status(res)
@@ -27,15 +27,13 @@ urlscan_result <- function(scan_id, include_dom=FALSE, include_shot=FALSE) {
 
   res <- jsonlite::fromJSON(res)
 
-  class(res) <- c("urlscan_result", "list")
-
   out <- list(scan_result = res)
 
   if (include_dom) {
 
     httr::GET(
       url = sprintf("https://urlscan.io/dom/%s", scan_id),
-      httr::user_agent("urlscan #rstats package : https://github.com/hrbrmstr/urlscan")
+      .URLSCANUA
     ) -> res
 
     out$dom <- res
@@ -46,12 +44,14 @@ urlscan_result <- function(scan_id, include_dom=FALSE, include_shot=FALSE) {
 
     httr::GET(
       url = sprintf("https://urlscan.io/screenshots/%s.png", scan_id),
-      httr::user_agent("urlscan #rstats package : https://github.com/hrbrmstr/urlscan")
+      .URLSCANUA
     ) -> res
 
     if (httr::status_code(res) == 200) out$screenshot <-  magick::image_read(res$content)
 
   }
+
+  class(out) <- c("urlscan_result", "list")
 
   out
 

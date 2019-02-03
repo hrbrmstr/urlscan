@@ -1,8 +1,8 @@
 Package: urlscan
 Type: Package
 Title: Analyze Websites and Resources They Request
-Version: 0.1.0
-Date: 2018-03-23
+Version: 0.2.0
+Date: 2019-02-03
 Authors@R: c(
     person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
            comment = c(ORCID = "0000-0001-5670-2640"))
@@ -26,4 +26,4 @@ Imports:
     httr,
     jsonlite,
     magick
-RoxygenNote: 6.0.1.9000
+RoxygenNote: 6.1.1

@@ -18,8 +18,6 @@ urlscan_search(query, size = 100, offset = 0, sort = NULL)
 \description{
 urlscan.io uses an Elasticsearch back-end and enables querying by a number
 of fields, including:
-}
-\details{
 \itemize{
 \item \code{domain}: Domain (or a subdomain of it) is contacted in one of the requests
 \item \code{page.domain}: Domain (or a subdomain of it) is the first domain to be contacted
@@ -31,7 +29,8 @@ of fields, including:
 \item \code{server}: The page contact a host running this web server
 \item \code{task.method}: one of "\code{manual}" or "\code{api}"; show manual (user) or API submissions
 }
-
+}
+\details{
 The fields \code{ip}, \code{domain}, \code{url}, \code{asn}, \code{asnname}, \code{country} and \code{server} can also be prefixed with \code{page.}
 to only match the value for the first request/response (e.g. \code{page.server:nginx AND page.domain:de}).
 Furthermore, you can concatenate search-terms with \code{AND}, \code{OR}, etc.

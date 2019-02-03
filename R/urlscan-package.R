@@ -10,7 +10,7 @@
 #' @name urlscan
 #' @docType package
 #' @author Bob Rudis (bob@@rud.is)
-#' @importFrom httr GET user_agent content stop_for_status warn_for_status status_code POST
+#' @import httr
 #' @importFrom jsonlite fromJSON
 #' @importFrom magick image_read
 NULL

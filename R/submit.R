@@ -16,22 +16,28 @@
 #' @param public Public or private results? `TRUE` (default) = public.
 #' @param custom_agent (character) Override User-Agent for this scan
 #' @param referer (character) Override HTTP referer for this scan
+#' @param api_key your API key. See [urlscan_api_key()]
 #' @return The response to the API call will give you the ID and API endpoint for t
 #'         he scan, you can use it to retrieve the result after waiting for a short while.
 #' @references <https://urlscan.io/about-api/#submission>
 #' @export
-urlscan_submit <- function(url, public=TRUE, custom_agent=NULL, referer=NULL) {
+urlscan_submit <- function(url, public=TRUE, custom_agent=NULL, referer=NULL,
+                           api_key = urlscan_api_key()) {
 
    httr::POST(
      url = "https://urlscan.io/api/v1/scan/",
-     content_type_json(),
-     query = list(
+     encode = "json",
+     httr::content_type_json(),
+     body = list(
        url = url,
        public = if (public[1]) "on" else NULL,
        customagent = custom_agent,
        referer = referer
      ),
-     httr::user_agent("urlscan #rstats package : https://github.com/hrbrmstr/urlscan")
+     httr::add_headers(
+       `API-Key` = api_key
+     ),
+     .URLSCANUA
    ) -> res
 
    httr::stop_for_status(res)

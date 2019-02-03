@@ -4,7 +4,8 @@
 \alias{urlscan_submit}
 \title{Submit a URL for scanning}
 \usage{
-urlscan_submit(url, public = TRUE, custom_agent = NULL, referer = NULL)
+urlscan_submit(url, public = TRUE, custom_agent = NULL,
+  referer = NULL, api_key = urlscan_api_key())
 }
 \arguments{
 \item{url}{URL to submit}
@@ -14,6 +15,8 @@ urlscan_submit(url, public = TRUE, custom_agent = NULL, referer = NULL)
 \item{custom_agent}{(character) Override User-Agent for this scan}
 
 \item{referer}{(character) Override HTTP referer for this scan}
+
+\item{api_key}{your API key. See \code{\link[=urlscan_api_key]{urlscan_api_key()}}}
 }
 \value{
 The response to the API call will give you the ID and API endpoint for t
